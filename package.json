@@ -1,0 +1,19 @@
+{
+  "name": "entry_management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Payal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.12",
+    "nodemailer": "^6.3.1",
+    "npm": "^6.13.1"
+  }
+}
