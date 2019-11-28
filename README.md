@@ -6,7 +6,7 @@ When the visitor is leaving, the check out time is recorded and a mail is sent t
 
 
 TECNICAL STACK:
-Node js
-MongoDB (database)
-Javascript
-HTML
+Node js ,
+ MongoDB(database) ,
+Javascript ,
+ HTML
