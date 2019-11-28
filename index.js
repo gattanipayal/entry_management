@@ -30,8 +30,8 @@ var transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-      user: "gattanipayal@gmail.com", // email of the entry management authority
-      pass: "payal21699" // password
+      user: authority_email, // email of the entry management authority
+      pass: authority_pass // password
     }
   });
 
@@ -64,7 +64,7 @@ app.post("/new",function(req,res){
 		}else{
 			//mail and sms to host regarding visitor is sent
 			var mailOptions={
-    			from: "gattanipayal@gmail.com" ,// sender address
+    			from: auth_email ,// sender address
     			to:entry.hostEmail, // list of receivers
     			subject:"From Gate Authorities", 
     			html: "<h3>Details of the guest:</h3><p>Visitor Name:"+entry.visitorName+"</p><p>Visitor Email:"+entry.visitorEmail+"</p><p>Visitor Contact:"+entry.visitorContact+"</p>"
@@ -107,7 +107,7 @@ app.post("/exit",function(req,res){
 			//mail regarding the deails of his visit is sent
 			console.log(entry);
 			var mailOptions={
-    			from: "gattanipayal@gmail.com" ,// sender address
+    			from: auth_email ,// sender address
     			to:entry.hostEmail, // list of receivers
     			subject:"From Gate Authorities", 
     			html: "<h3>Details of your visit:</h3><p>Visitor Name:"+entry.visitorName+"</p><p>Visitor Contact:"+entry.visitorContact+"</p><p>Check in Time:"+entry.checkInTime+"</p><p>Check Out Time:"+entry.checkOutTime+"</p><p>Host Name:"+entry.hostName+"</p><p>Address Visited: Innovaccer office, Noida</p>"
